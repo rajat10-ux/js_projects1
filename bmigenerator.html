@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<style>
+        body{
+                background-color: rgb(207, 201, 201);
+                font-size: 2.5rem;
+                margin-left: 50px;
+                background-color: black;
+                color: white;
+        }
+        .contain{
+                border: solid red 1px;
+        width: 560px;
+        margin: 20px auto;
+        box-sizing: border-box;
+
+        }
+        input{
+                width: 350px;
+                height: 50px;
+                font-size: 2rem;
+        }
+        .btn{
+                background-color: red;
+                color: white;
+                font-size: 2rem;
+                cursor: pointer;
+                border-radius: 20px;
+                height: 70px;
+        }
+        #ans{
+                /* border: solid red 1px; */
+                width: 558px;
+                height: 100px;
+                margin-top: 20px;
+        }
+</style>
+<body>
+     <div class="contain">
+        <h2>BMI GENERATOR</h2>
+     <input type="number" placeholder="enter your height in M" id="height"><br><br>
+     <input type="number" placeholder="enter your wieght in kg" id="wieght">   <br><br>
+     <button class="btn">Calculate</button>
+     <div id="ans"></div>
+     </div>
+</body>
+<script>
+        let btn=document.querySelector(".btn")
+let height=document.getElementById("height")
+ let wieght=document.getElementById("wieght");
+        btn.addEventListener("click",()=>{
+       //console.log(height.value,wieght.value);
+let bmi=(wieght.value/(height.value*height.value)).toFixed(2)
+       //console.log(bmi.value);
+       let ans=document.getElementById("ans");
+       if(bmi<18.5){
+        ans.innerHTML=`your bmi is ${bmi} and you are underwieght`;
+       }
+       if(bmi>18.6 && bmi<24.9){
+        ans.innerHTML=`your bmi is ${bmi} and you are normal range`;
+       }
+       if(bmi>24.9){
+        ans.innerHTML=`your bmi is ${bmi} and you are overwieght `;
+       }
+       
+})
+</script>
+</html>

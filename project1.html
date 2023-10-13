@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <title>title dom learn</title>
+</head>
+<style>
+        body{
+                background-color: black;
+                color: white;
+                margin: 0;
+                padding: 0;
+        }
+</style>
+<body>
+        <div class="bg-black">
+                <h1 class="h1" id="title">DOM learnong chai anf code</h1><br>
+  <p id="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quo deserunt eos odit voluptatibus provident obcaecati </p>
+        </div>
+</body>
+<script>
+        let h1=document.getElementById("title");
+        h1.innerHTML="chai aur code";
+        h1.style.color="red";
+        h1.innerText="hello mr name"
+        console.log(h1);
+let p=document.getElementById("p");
+p.style.fontSize="2.5rem";
+</script>
+</html>

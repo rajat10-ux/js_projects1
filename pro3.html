@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+      <ul class="language">
+        <li>javascript</li>
+        <button>click me</button>
+      </ul>  
+</body>
+<script>
+        function add(lang){
+                let body=document.querySelector("body");
+        let element=document.createElement("li");
+element.innerHTML=`${lang}`;
+ let ul=document.querySelector(".language").appendChild(element) }
+ add("js");
+ add("html")
+ function addto(lang){
+        const li=document.createElement("li");
+        li.appendChild(document.createTextNode(lang)); 
+        document.querySelector('.language').appendChild(li);
+}
+addto("goloang");
+const secondlang=document.querySelector("li:nth-child(2)");
+// secondlang.innerHTML=" ";
+const newli=document.createElement("li");
+newli.textContent="mojo";
+secondlang.replaceWith(newli);
+</script>
+</html>
